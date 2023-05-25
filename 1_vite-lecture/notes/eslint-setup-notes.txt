@@ -1,0 +1,37 @@
+INSTALL ESLINT:
+
+npm i -D eslint@8.24.0 eslint-config-prettier@8.5.0
+
+make a file on base project .eslintrc.json and add the following code:
+
+{
+  "extends": ["eslint:recommended", "prettier"],
+  "plugins": [],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  }
+}
+
+Add the following code in package.json > scripts for those who dont use vscode.
+
+"lint" : "eslint \"src/**/*.{js,jsx} \" --quiet"
+
+-- npm run lint ( to check if it's working ) 
+-- npm run lint -- --debug ( to debug ) 
+
+Every good project contains a .gitignore file, add the following code inside git ignore:
+
+node_modules/
+dist/
+.env
+.DS_Store
+.vscode/

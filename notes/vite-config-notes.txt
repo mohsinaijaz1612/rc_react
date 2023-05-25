@@ -1,0 +1,33 @@
+VITE CONFIGURATION:
+
+npm i -D @vitejs/plugin-react@2.1.0
+
+create a vite.config.js file and add the following code in it: 
+
+
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+  plugins: [react()],
+  root: "src",
+});
+
+
+npm i react@18.2.0 react-dom@18.2.0
+
+in app.jsx import react:
+
+=> import React from 'react';
+=> import ReactDOM from 'react-dom';
+
+
+
+
+Add the following inside package.json  > scripts :
+
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+
+run command "npm run dev"

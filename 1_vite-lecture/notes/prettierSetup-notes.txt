@@ -1,0 +1,22 @@
+NPM & Prettier Setup:
+
+npm init -y
+
+npm install -- save-dev prettier
+
+create a new file call it .prettierrc
+
+-- Install prettier code formater extension
+-- Format on save settings page vscode
+-- Enable prettier and require config option
+
+
+!!! If Prettier not working add the following in settings.json:
+
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+
+
+** For non  vscode users: Go to package.json and inside scripts add the following:
+
+    "format" : "prettier --write "\src/**/*.{js, jsx}  \" "
